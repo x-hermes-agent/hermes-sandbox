@@ -31,6 +31,8 @@ Each side mounts the other's folder read-only, so neither can drop files or syml
 | `nix.sh` | Login-shell environment for Nix (`PATH`, certificates, `NIX_PATH`) |
 | `docker-compose.yml` | Example: Hermes and the sandbox with the shared volumes |
 
+Prebuilt images for `linux/amd64` and `linux/arm64` are published to `ghcr.io/x-hermes-agent/hermes-sandbox` for every release tag (`1.0.0`, `1.0`). To build your own instead, replace `image:` in the example compose with `build: .`.
+
 Build arguments: `HERMES_UID` / `HERMES_GID` (default `10000`, the user of the official Hermes image) own `hermes-to-sandbox`; `NIX_VERSION` (default `2.28.5`).
 
 ## Setup
@@ -45,7 +47,7 @@ Build arguments: `HERMES_UID` / `HERMES_GID` (default `10000`, the user of the o
 2. Put the public key into the sandbox's environment (`SANDBOX_AUTHORIZED_KEY` in the example compose), then start both services:
 
    ```bash
-   docker compose up -d --build
+   docker compose up -d
    ```
 
 3. Point Hermes' terminal at the sandbox in `config.yaml`:

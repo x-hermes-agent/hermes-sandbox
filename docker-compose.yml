@@ -14,8 +14,7 @@ services:
     restart: unless-stopped
 
   hermes-sandbox:
-    build: .
-    image: hermes-sandbox:local
+    image: ghcr.io/x-hermes-agent/hermes-sandbox:1.0.0
     volumes:
       - hermes_to_sandbox:/home/agent/hermes-to-sandbox:ro
       - sandbox_home:/home/agent

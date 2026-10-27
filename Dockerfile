@@ -1,5 +1,9 @@
 FROM debian:13.7-slim
 
+LABEL org.opencontainers.image.source="https://github.com/x-hermes-agent/hermes-sandbox" \
+      org.opencontainers.image.description="Isolated SSH terminal sandbox for Hermes Agent" \
+      org.opencontainers.image.licenses="MIT"
+
 # UID/GID of the user Hermes runs as (10000 in the official hermes-agent image).
 ARG HERMES_UID=10000
 ARG HERMES_GID=10000
