@@ -1,0 +1,10 @@
+HostKey /etc/ssh/keys/ssh_host_ed25519_key
+PermitRootLogin no
+AllowUsers agent
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+AllowAgentForwarding no
+AllowStreamLocalForwarding no
+AllowTcpForwarding no
+PermitTunnel no
+X11Forwarding no
